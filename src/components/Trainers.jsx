@@ -53,11 +53,11 @@ const Trainers = () => {
     <section className="bg-[#0C0C0C] py-20 overflow-hidden">
       <div className="max-w-[100%]">
         <div className="text-center mb-20">
-          <h2 className="text-[#B1F82A] text-sm font-black uppercase tracking-[0.5em] mb-4">
+          <h2 className="text-brand-gold text-sm font-black uppercase tracking-[0.5em] mb-4">
             Comunidade Uplay
           </h2>
           <p className="text-white text-3xl md:text-5xl font-black tracking-tighter italic uppercase">
-            A opinião de quem <span className="text-[#B1F82A]">não desiste</span>
+            A opinião de quem <span className="text-brand-gold">não desiste</span>
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const Trainers = () => {
                       className="relative p-8 md:p-12 rounded-[3rem] bg-gradient-to-br from-gray-900 to-black border border-white/5 min-h-[400px] flex flex-col justify-center items-center text-center shadow-2xl pointer-events-none"
                     >
                       <Quote 
-                        className={`text-[#B1F82A] absolute -top-6 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${isActive ? 'opacity-40' : 'opacity-0'}`} 
+                        className={`text-brand-gold absolute -top-6 left-1/2 -translate-x-1/2 transition-opacity duration-500 ${isActive ? 'opacity-40' : 'opacity-0'}`} 
                         size={64} 
                       />
                       
@@ -96,13 +96,13 @@ const Trainers = () => {
                       </p>
                       
                       <div className="flex flex-col items-center">
-                        <div className="w-14 h-14 bg-[#B1F82A] rounded-full flex items-center justify-center font-black text-xl text-black mb-4 shadow-[0_0_30px_rgba(177,248,42,0.3)]">
+                        <div className="w-14 h-14 bg-brand-gold rounded-full flex items-center justify-center font-black text-xl text-black mb-4 shadow-[0_0_30px_rgba(177,248,42,0.3)]">
                           {item.initial}
                         </div>
                         <h3 className="text-white font-black text-lg uppercase tracking-tighter italic">
                           {item.name}
                         </h3>
-                        <p className="text-[#B1F82A] text-[10px] font-black uppercase tracking-widest mt-1">
+                        <p className="text-brand-gold text-[10px] font-black uppercase tracking-widest mt-1">
                           {item.time}
                         </p>
                       </div>

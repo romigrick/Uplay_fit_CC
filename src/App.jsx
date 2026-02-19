@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { AnimatePresence, motion } from 'framer-motion';
 import logoInside from '@/assets/inside_branca.png';
+import logoUplay from '@/assets/logo_com_cc.png';
 // Componentes
 import Hero from '@/components/Hero';
 import QuestionnaireForm from '@/components/QuestionnaireForm';
@@ -93,7 +94,7 @@ function App() {
                 {/* Logo à Esquerda */}
                 <div className="flex items-center">
                   <img 
-                    src="/logo-uplay.png" 
+                    src={logoUplay}
                     alt="Uplay Logo" 
                     className="h-10 w-auto brightness-0 invert" 
                   />

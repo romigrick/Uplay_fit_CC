@@ -36,11 +36,11 @@ const LogoCloud = ({onStart}) => {
   return (
     <div className="py-24 bg-[#0C0C0C] overflow-hidden border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 mb-16 text-center">
-        <h2 className="text-[#B1F82A] text-sm font-black uppercase tracking-[0.5em] mb-4">
+        <h2 className="text-brand-gold text-sm font-black uppercase tracking-[0.5em] mb-4">
           Tour Virtual
         </h2>
         <p className="text-white text-3xl md:text-5xl font-black tracking-tighter italic">
-          POR DENTRO É MUITO <span className="text-[#B1F82A]">MELHOR</span>.
+          POR DENTRO É MUITO <span className="text-brand-gold">MELHOR</span>.
         </p>
       </div>
 
@@ -67,10 +67,10 @@ const LogoCloud = ({onStart}) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 pointer-events-none"></div>
               <div className="absolute bottom-10 left-10 right-10 pointer-events-none">
-                <span className="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter group-hover:text-[#B1F82A] transition-colors">
+                <span className="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter group-hover:text-brand-gold transition-colors">
                   {area.name}
                 </span>
-                <div className="w-0 group-hover:w-full h-1 bg-[#B1F82A] transition-all duration-500 mt-2"></div>
+                <div className="w-0 group-hover:w-full h-1 bg-brand-gold transition-all duration-500 mt-2"></div>
               </div>
             </div>
           ))}
@@ -79,9 +79,9 @@ const LogoCloud = ({onStart}) => {
                       <div className="mt-10 mb-10 flex flex-row justify-center sm:flex-row gap-4">
                           <Button
                               onClick={() => onStart()}
-                              className="py-6 px-10 text-xl font-black rounded-full bg-[#B1F82A] text-black hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(177,248,42,0.3)] uppercase"
+                              className="py-6 px-10 text-xl font-black rounded-full bg-brand-gold text-black hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(177,248,42,0.3)] uppercase"
                           >
-                              Agendar Aula Grátis
+                              Agendar Aula Experiência
                           </Button>
                       </div>
     </div>

@@ -3,9 +3,15 @@ import { cn } from "@/lib/utils";
 import { MapPin, Car } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const BentoGrid = ({onStart}) => {
+const BentoGrid = ({ onStart }) => {
+    const scrollToPlans = () => {
+        const element = document.getElementById('planos');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     const Card = ({ className, children }) => (
-        <div className={cn("relative group rounded-[2.5rem] p-8 flex flex-col overflow-hidden", className)}>
+        <div className={cn("relative group rounded-[3.5rem] p-10 flex flex-col overflow-hidden", className)}>
             {children}
         </div>
     );
@@ -13,55 +19,83 @@ const BentoGrid = ({onStart}) => {
     return (
         <section className="bg-[#0C0C0C] py-20">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[700px]">
-                    {/* Card Comunidade */}
-                    <Card className="md:col-span-2 md:row-span-2 bg-gray-900 border border-white/5 justify-between">
-                        <div>
-                            <p className="text-xs font-black text-[#B1F82A] uppercase tracking-[0.3em] mb-4">Nossa Comunidade</p>
-                            <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none mb-6">MUITO MAIS QUE <br />UM TREINO.</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-8 h-auto md:h-[850px]">
+                    
+                    {/* Card Principal: CONHEÇA A UPLAY POR DENTRO */}
+                    <Card className="md:col-span-2 md:row-span-2 bg-gray-900 border border-white/5">
+                        <div className="mb-8">
+                            <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] mb-6 uppercase italic">
+                                CONHEÇA A <br/> UPLAY POR DENTRO
+                            </h3>
+                            <p className="text-gray-400 font-bold italic text-lg max-w-xl">
+                                3 andares. 10+ setores específicos. Estrutura completa pensada pra você ter resultado. Vem conhecer pessoalmente.
+                            </p>
                         </div>
-                        <div className="flex-grow mt-4 relative">
-                            <img
-                                className="absolute inset-0 w-full h-full object-cover rounded-3xl grayscale hover:grayscale-0 transition-all duration-700"
-                                alt="Alunos Uplay"
-                                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975"
-                            />
+                        
+                        {/* Grid de Fotos com animação de aproximação ao passar o mouse */}
+                        <div className="flex-grow grid grid-cols-3 grid-rows-2 gap-3 rounded-[2.5rem] overflow-hidden transition-all duration-700 hover:scale-[1.02] cursor-pointer">
+                            {[
+                                "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+                                "https://images.unsplash.com/photo-1571902943202-507ec2618e8f",
+                                "https://images.unsplash.com/photo-1593079831268-3381b0db4a77",
+                                "https://images.unsplash.com/photo-1540497077202-7c8a3999166f",
+                                "https://images.unsplash.com/photo-1593079831268-3381b0db4a77",
+                                "https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+                            ].map((url, i) => (
+                                <div key={i} className="overflow-hidden">
+                                    <img 
+                                        className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-110 transition-all duration-700 ease-out" 
+                                        src={`${url}?q=80&w=500`} 
+                                        alt={`Setor ${i + 1}`} 
+                                    />
+                                </div>
+                            ))}
+                        </div>
+
+                        <Button 
+                            onClick={() => onStart()}
+                            className="mt-8 w-full py-10 bg-white text-black font-black text-2xl uppercase tracking-tighter rounded-3xl hover:bg-brand-gold transition-all duration-300"
+                        >
+                            AGENDAR MINHA VISITA
+                        </Button>
+                    </Card>
+
+                    {/* Card de Investimento: R$ 7,50 POR DIA */}
+                    <Card className="bg-white/5 border border-white/10 justify-center text-center">
+                        <div className="space-y-6">
+                            <h3 className="text-5xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter italic">
+                                R$ 7,50 <br/> <span className="text-brand-gold">POR DIA.</span>
+                            </h3>
+                            <div className="space-y-2">
+                                <p className="text-white font-black italic text-2xl">Menos que um café.</p>
+                                <p className="text-gray-400 font-bold text-sm uppercase tracking-tighter">Mais que dobrar suas chances de não desistir.</p>
+                            </div>
+                            <Button 
+                                onClick={scrollToPlans}
+                                className="w-full py-8 bg-brand-gold text-black font-black uppercase text-sm tracking-[0.2em] rounded-2xl hover:bg-white hover:scale-105 transition-all"
+                            >
+                                VER PLANOS COMPLETOS
+                            </Button>
                         </div>
                     </Card>
 
-                    {/* Card Estacionamento */}
-                    <Card className="bg-gradient-to-br from-[#1E04FB] to-black text-white justify-end group">
-                        <div className="relative z-10">
-                            <div className="mb-4 bg-white/10 w-fit p-3 rounded-2xl group-hover:bg-[#B1F82A] group-hover:text-black transition-all duration-500">
-                                <Car size={24} />
+                    {/* Card Diferencial: Estacionamento e Localização */}
+                    <Card className="bg-brand-gold text-black justify-center text-center group">
+                        <div className="relative z-10 space-y-6">
+                            <div className="flex justify-center gap-4">
+                                <div className="bg-black text-brand-gold p-4 rounded-2xl shadow-xl"><Car size={32} /></div>
+                                <div className="bg-black text-brand-gold p-4 rounded-2xl shadow-xl"><MapPin size={32} /></div>
                             </div>
-                            <p className="text-xs font-black uppercase tracking-widest opacity-60">Diferencial</p>
-                            <h3 className="text-3xl font-black mt-2 italic tracking-tighter leading-tight">ESTACIONAMENTO <br />GRÁTIS E SEGURO.</h3>
+                            <h3 className="text-3xl md:text-3xl font-black italic tracking-tighter leading-[0.9] uppercase">
+                                ESTACIONAMENTO <br/> EXCLUSIVO E SEGURO.
+                            </h3>
+                            <div className="bg-black/5 py-2 px-4 rounded-full inline-block">
+                                <p className="text-xs font-black uppercase tracking-[0.2em]">Rua Renato Polatti, 2541</p>
+                            </div>
                         </div>
                     </Card>
-
-                    {/* Card Localização */}
-                    <Card className="bg-[#B1F82A] text-black justify-end group">
-                        <div className="relative z-10">
-                            <div className="mb-4 bg-black/10 w-fit p-3 rounded-2xl group-hover:bg-black group-hover:text-[#B1F82A] transition-all duration-500">
-                                <MapPin size={24} />
-                            </div>
-                            <p className="text-xs font-black uppercase tracking-widest opacity-70">Localização</p>
-                            <h3 className="text-3xl font-black mt-2 italic tracking-tighter leading-tight uppercase">RUA RENATO <br />POLATTI, 2541.</h3>
-                        </div>
-                    </Card>
-                </div>
-                <div className="mt-10 mb-10 flex flex-row justify-center sm:flex-row gap-4">
-                    <Button
-                        onClick={() => onStart()}
-                        className="py-6 px-10 text-xl font-black rounded-full bg-[#B1F82A] text-black hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(177,248,42,0.3)] uppercase"
-                    >
-                        Agendar Aula Grátis
-                    </Button>
                 </div>
             </div>
-
-
         </section>
     );
 };

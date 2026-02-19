@@ -1,55 +1,90 @@
 import React from 'react';
-import { Dumbbell, Flame, Users } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Globe, Music, FlaskConical, CheckCircle2 } from 'lucide-react';
 
+const WorkoutTypes = () => {
+  const modalidades = [
+    { nome: "BODYPUMP", desc: "Força Muscular" },
+    { nome: "SPRINT", desc: "HIIT em Bike" },
+    { nome: "BODYBALANCE", desc: "Flexibilidade" },
+    { nome: "RPM", desc: "Ciclismo Indoor" }
+  ];
 
-const workoutCategories = [
-  {
-    title: 'Musculação Real',
-    description: 'Nada de ficar perdido. Professor ao seu lado corrigindo cada movimento e ajustando sua carga.',
-    icon: <Dumbbell className="h-10 w-10 text-[#B1F82A]" />,
-    intensity: [{ label: 'Força', value: 95 }, { label: 'Técnica', value: 100 }, { label: 'Apoio', value: 100 }]
-  },
-  {
-    title: 'Aulas Coletivas',
-    description: 'Motivação extra e energia do grupo incluídas no seu plano. Dance, lute ou treine em equipe.',
-    icon: <Users className="h-10 w-10 text-[#B1F82A]" />,
-    intensity: [{ label: 'Cardio', value: 90 }, { label: 'Energia', value: 100 }, { label: 'Social', value: 85 }]
-  },
-  {
-    title: 'Queima Máxima',
-    description: 'Métodos focados em aceleração metabólica para resultados que você vê rápido no espelho.',
-    icon: <Flame className="h-10 w-10 text-[#B1F82A]" />,
-    intensity: [{ label: 'Suor', value: 100 }, { label: 'Queima', value: 95 }, { label: 'Foco', value: 80 }]
-  },
-];
+  return (
+    <section className="bg-[#0C0C0C] py-24">
+      <div className="max-w-full mx-auto">
+        {/* Título de Entrada */}
+        <div className="text-center mb-16">
+          <p className="text-brand-gold text-xs font-black uppercase tracking-[0.4em] mb-4">Energia que contagia</p>
+          <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase italic">
+            MUITO MAIS QUE <br className="hidden md:block" /> UM TREINO.
+          </h2>
+        </div>
 
-const IntensityBar = ({ label, value }) => (
-  <div className="w-full text-left">
-    <div className="flex justify-between mb-1"><span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">{label}</span></div>
-    <div className="w-full bg-gray-800 rounded-full h-1.5"><div className="bg-[#B1F82A] h-1.5 rounded-full" style={{ width: `${value}%` }}></div></div>
-  </div>
-);
+        {/* FAIXA LES MILLS: Removi o max-w e adicionei w-full */}
+        <div className="w-full bg-[#F5F5F5] py-16 md:py-24 text-black shadow-[0_20px_80px_rgba(255,255,255,0.05)]">
+          {/* Container interno para manter o CONTEÚDO centralizado dentro da faixa */}
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
 
-const WorkoutTypes = () => (
-  <section className="bg-[#0C0C0C] py-20">
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-20">
-        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">EXPLORE NOSSOS <span className="text-[#B1F82A]">MÉTODOS</span></h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {workoutCategories.map((category, index) => (
-          <div key={index} className="p-8 rounded-[2.5rem] bg-white/5 border border-white/10 flex flex-col hover:border-[#B1F82A]/30 transition-all group">
-            <div className="mb-6 group-hover:scale-110 transition-transform">{category.icon}</div>
-            <h3 className="text-2xl font-black text-white mb-4 uppercase italic tracking-tighter">{category.title}</h3>
-            <p className="text-gray-400 font-medium mb-8 leading-relaxed">{category.description}</p>
-            <div className="mt-auto space-y-4">{category.intensity.map((item) => <IntensityBar key={item.label} {...item} />)}</div>
+              {/* Lado Esquerdo: Conteúdo */}
+              <div className="flex-1 text-center lg:text-left">
+                <span className="inline-block bg-black text-brand-gold px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
+                  MÉTODO INTERNACIONAL
+                </span>
+                <h3 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter mb-8 uppercase italic">
+                  <span className="text-brand-gold">LES MILLS:</span> O MÉTODO QUE CONQUISTA O MUNDO INTEIRO.
+                </h3>
+
+              </div>
+
+              {/* Lado Direito: Pilares e Modalidades */}
+              <div className="flex-1 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+                  <div className="flex flex-col items-center lg:items-start group cursor-default">
+                    <Globe className="text-brand-gold mb-3 transition-transform group-hover:scale-110" size={32} />
+                    <h4 className="font-black text-sm uppercase italic">Global</h4>
+                    <p className="text-[10px] font-bold text-gray-500 uppercase leading-tight">100 países / 20.000 academias</p>
+                  </div>
+                  <div className="flex flex-col items-center lg:items-start group cursor-default">
+                    <Music className="text-brand-gold mb-3 transition-transform group-hover:scale-110" size={32} />
+                    <h4 className="font-black text-sm uppercase italic">Música Original</h4>
+                    <p className="text-[10px] font-bold text-gray-500 uppercase leading-tight">Licenciada & Sincronizada</p>
+                  </div>
+                  <div className="flex flex-col items-center lg:items-start group cursor-default">
+                    <FlaskConical className="text-brand-gold mb-3 transition-transform group-hover:scale-110" size={32} />
+                    <h4 className="font-black text-sm uppercase italic">Ciência</h4>
+                    <p className="text-[10px] font-bold text-gray-500 uppercase leading-tight">Especialistas do exercício</p>
+                  </div>
+                </div>
+
+                <div className="bg-black/5 rounded-[2rem] p-8 border border-black/5">
+                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-6">Nossas Modalidades</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {modalidades.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3 group">
+                        <CheckCircle2 className="text-brand-gold shrink-0 transition-transform group-hover:scale-125" size={18} />
+                        <div className="flex flex-col">
+                          <span className="font-black tracking-tighter uppercase italic">{item.nome}</span>
+                          <span className="text-[14px] font-bold text-gray-400 uppercase">({item.desc})</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center mt-12 max-w-5xl mx-auto">
+              <p className="text-black text-center text-1xl md:text-3xl font-black tracking-tighter italic uppercase">
+                <span className="text-brand-gold">Presente em mais de 20.000 academias em 100 países.<br/><br/></span>
+                Desenvolvido por cientistas do exercício. <br />Música licenciada + coreografias testadas. <br />E a Uplay Campo Comprido traz isso pra você. 
+              </p>
+
+            </div>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-
-  </section>
-);
+    </section>
+  );
+};
 
 export default WorkoutTypes;
