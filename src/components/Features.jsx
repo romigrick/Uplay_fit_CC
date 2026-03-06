@@ -7,16 +7,16 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-20 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase italic">
-              POR QUE A UPLAY<br />
-              <span className="text-brand-gold">É DIFERENTE?</span>
+            <h2 className="text-center text-4xl md:text-5xl md:text-left font-black text-white leading-tight tracking-tighter uppercase italic">
+              POR QUE A UPLAY CC
+              <span className="text-brand-gold"><br />É DIFERENTE?</span>
             </h2>
-            <p className="pt-2 text-gray-500 text-sm uppercase tracking-[0.3em] max-w-s">
+            <p className="text-center md:text-left pt-2 text-gray-500 text-sm uppercase tracking-[0.3em] max-w-s">
               Você já treinou mas cansou de sempre desistir?<br />
               O problema não é você. <strong>É o método.</strong>
             </p>
           </div>
-          <p className="bg-white/5 p-10 rounded-xl text-gray-500 font-black text-sm uppercase tracking-[0.3em]">
+          <p className="text-center md:text-left bg-white/5 p-10 rounded-xl text-gray-500 font-black text-sm uppercase tracking-[0.3em]">
             Na maioria das academias você <br />fica perdido(a), sem orientação,<br />
             sem acompanhamento. <br /><br />Na Uplay, nossa equipe qualificada <br />te
             acompanha do básico ao avançado. <br />Por isso você não desiste.
@@ -95,7 +95,7 @@ const Features = () => {
           </div>
 
           {/* Uplay Campo Comprido */}
-          <div className="bg-brand-gold p-10 md:p-14 rounded-[3rem] transform md:-rotate-1 shadow-[0_20px_80px_rgba(177,248,42,0.15)] relative flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="bg-brand-gold p-10 md:p-14 rounded-[3rem] transform shadow-[0_20px_80px_rgba(177,248,42,0.15)] relative flex flex-col items-center md:items-start text-center md:text-left">
             <div className="bg-black text-[#B1F82A] w-12 h-12 rounded-full flex items-center justify-center mb-8">
               <Plus size={24} />
             </div>
@@ -116,7 +116,7 @@ const Features = () => {
               <li className="flex flex-col items-center md:items-start gap-1">
                 <div className="flex items-center gap-3">
                   <Zap size={18} fill="black" />
-                  <span>TREINO MONTADO PRO SEU CORPO</span>
+                  <span>TREINO MONTADO Para o O SEU objetivo</span>
                 </div>
                 <span className="text-[10px] md:text-xs opacity-60 normal-case font-bold ml-0 md:ml-8">
                   Personalizado, evolução constante
@@ -127,7 +127,7 @@ const Features = () => {
               <li className="flex flex-col items-center md:items-start gap-1">
                 <div className="flex items-center gap-3">
                   <Zap size={18} fill="black" />
-                  <span>CORREÇÃO DE TÉCNICA TODO DIA</span>
+                  <span>CORREÇÃO DE TÉCNICA</span>
                 </div>
                 <span className="text-[10px] md:text-xs opacity-60 normal-case font-bold ml-0 md:ml-8">
                   Você não treina errado aqui
@@ -149,7 +149,7 @@ const Features = () => {
               <li className="flex flex-col items-center md:items-start gap-1">
                 <div className="flex items-center gap-3">
                   <Zap size={18} fill="black" />
-                  <span>COMUNIDADE ATIVA</span>
+                  <span>AMBIENTE QUE INSPIRA</span>
                 </div>
                 <span className="text-[10px] md:text-xs opacity-60 normal-case font-bold ml-0 md:ml-8">
                   Competições, desafios, você não treina sozinho

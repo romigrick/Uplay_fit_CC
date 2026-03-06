@@ -1,14 +1,24 @@
 import React, { useRef, useState } from 'react';
 import { motion, useAnimationFrame, useMotionValue } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import cc1 from '../assets/cc (1).jpeg';
+import cc2 from '../assets/cc (2).jpeg';
+import cc3 from '../assets/cc (3).jpeg';
+import cc4 from '../assets/cc (4).jpeg';
+import cc5 from '../assets/cc (5).jpeg';
+import cc6 from '../assets/cc (6).jpeg';
+import cc7 from '../assets/cc (7).jpeg';
+import cc8 from '../assets/cc (8).jpeg';
+import cc9 from '../assets/cc (9).jpeg';
 
+import lesmills1 from '../assets/lesmills1.jpeg';
 
 const areas = [
-  { name: "ÁREA MUSCULAÇÃO", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600" },
-  { name: "ESPAÇO CARDIO", img: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600" },
-  { name: "AULAS COLETIVAS", img: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=600" },
-  { name: "ÁREA FUNCIONAL", img: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=800" },
-  { name: "ESTACIONAMENTO", img: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=600" },
+  { name: "ÁREA MUSCULAÇÃO", img: cc8 },
+  { name: "ESPAÇO CARDIO", img: cc2 },
+  { name: "AULAS COLETIVAS", img: lesmills1 },
+  { name: "ÁREA FUNCIONAL", img: cc1 },
+  { name: "ESTACIONAMENTO", img: cc6 },
   { name: "AVALIAÇÃO FÍSICA", img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" }
 ];
 

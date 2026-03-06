@@ -3,6 +3,14 @@ import { cn } from "@/lib/utils";
 import { MapPin, Car } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+import cc3 from '../assets/cc (3).jpeg';
+import cc4 from '../assets/cc (4).jpeg';
+import cc5 from '../assets/cc (5).jpeg';
+import cc6 from '../assets/cc (6).jpeg';
+import cc7 from '../assets/cc (7).jpeg';
+import cc8 from '../assets/cc (8).jpeg';
+import cc9 from '../assets/cc (9).jpeg';
+
 const BentoGrid = ({ onStart }) => {
     const scrollToPlans = () => {
         const element = document.getElementById('planos');
@@ -35,12 +43,12 @@ const BentoGrid = ({ onStart }) => {
                         {/* Grid de Fotos com animação de aproximação ao passar o mouse */}
                         <div className="flex-grow grid grid-cols-3 grid-rows-2 gap-3 rounded-[2.5rem] overflow-hidden transition-all duration-700 hover:scale-[1.02] cursor-pointer">
                             {[
-                                "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
-                                "https://images.unsplash.com/photo-1571902943202-507ec2618e8f",
-                                "https://images.unsplash.com/photo-1593079831268-3381b0db4a77",
-                                "https://images.unsplash.com/photo-1540497077202-7c8a3999166f",
-                                "https://images.unsplash.com/photo-1593079831268-3381b0db4a77",
-                                "https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+                                cc3,
+                                cc4,
+                                cc5,
+                                cc9,
+                                cc7,
+                                cc8
                             ].map((url, i) => (
                                 <div key={i} className="overflow-hidden">
                                     <img 

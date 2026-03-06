@@ -29,7 +29,7 @@ const Hero = ({ onStart }) => {
 
 
           {/* Título com ajuste de tamanho e alinhamento */}
-          <h1 className="text-7xl sm:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase italic">
+          <h1 className="text-7xl sm:text-7xl font-black text-white tracking-tighter uppercase">
             VOCÊ <br />NÃO <span className="text-brand-gold">TREINA </span>
             SOZINHO.
           </h1>
@@ -76,8 +76,8 @@ const Hero = ({ onStart }) => {
         </div>
 
         <div className="grid grid-cols-1 gap-4">
-          {['Aula experiência', 'Avaliação física completa', 'Acompanhamento profissional'].map((item) => (
-            <div key={item} className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 flex items-center gap-4 group hover:border-[#B1F82A]/50 transition-all">
+          {['Ambiente que inspira', 'Metodo Uplay CC', 'Aulas Coletivas de alta performance'].map((item) => (
+            <div key={item} className="bg-white/25 backdrop-blur-md p-6 rounded-2xl border border-brand-gold/10 flex items-center gap-8 group hover:border-[#B1F82A]/50 transition-all">
               <div className="bg-brand-gold p-2 rounded-full text-black">
                 <Check size={20} />
               </div>

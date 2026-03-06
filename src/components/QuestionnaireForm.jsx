@@ -32,7 +32,7 @@ const QuestionnaireForm = ({ onComplete }) => {
             return;
         }
         if (step === 4) {
-            const msg = `Oi! Meu nome é ${formData.nome} e quero agendar minha aula grátis. Meu objetivo é ${formData.objetivo}, pretendo treinar ${formData.frequencia}x na semana no período da ${formData.periodo}.`;
+            const msg = `Oi! Meu nome é ${formData.nome} e quero agendar minha aula grátis. Meu objetivo é ${formData.objetivo}, pretendo treinar ${formData.frequencia}x na semana.`;
             window.open(`https://wa.me/5541984082147?text=${encodeURIComponent(msg)}`, "_blank");
             
             // CORREÇÃO AQUI: Passando o formData para o onComplete

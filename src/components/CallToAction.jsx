@@ -4,13 +4,12 @@ import { Clock, Check } from 'lucide-react';
 
 const CallToAction = ({ onStart }) => {
   const benefits = [
-    "Matrícula Grátis",
     "Avaliação Física Completa",
     "Professor em todas as aulas",
-    "Estacionamento Grátis",
+    "Estacionamento Exclusivo",
     "Treino montado personalizado",
-    "Aulas coletivas ilimitadas",
-    "Sem taxa de manutenção",
+    "Aulas coletivas Les Mills",
+    "Método Uplay CC",
   ];
 
   return (
@@ -30,7 +29,7 @@ const CallToAction = ({ onStart }) => {
               PLANO <br className="hidden md:block" /> ANUAL.
             </h2>
             <div className="text-5xl md:text-7xl font-black italic mb-2 tracking-tighter">12x R$ 229</div>
-            <p className="pl-6 pt-10 text-2xl font-bold opacity-60 italic">ou R$ 249/mês sem contrato</p>
+            <p className="pl-6 pt-2 text-2xl font-bold opacity-60 italic">ou R$ 249/mês sem contrato</p>
           </div>
 
           {/* Lado Direito: Benefícios */}
