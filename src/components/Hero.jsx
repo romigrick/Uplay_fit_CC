@@ -76,7 +76,7 @@ const Hero = ({ onStart }) => {
         </div>
 
         <div className="grid grid-cols-1 gap-4">
-          {['Ambiente que inspira', 'Metodo Uplay CC', 'Aulas Coletivas de alta performance'].map((item) => (
+          {['Ambiente que inspira', 'Método Uplay CC', 'Aulas Coletivas de alta performance'].map((item) => (
             <div key={item} className="bg-white/25 backdrop-blur-md p-6 rounded-2xl border border-brand-gold/10 flex items-center gap-8 group hover:border-[#B1F82A]/50 transition-all">
               <div className="bg-brand-gold p-2 rounded-full text-black">
                 <Check size={20} />
