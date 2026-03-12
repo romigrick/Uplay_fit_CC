@@ -15,28 +15,34 @@ import cc6 from '../assets/cc (6).jpeg';
 import cc7 from '../assets/cc (7).jpeg';
 import cc8 from '../assets/cc (8).jpeg';
 import cc9 from '../assets/cc (9).jpeg';
+import cc10 from '../assets/cc (10).jpg';
+import cc11 from '../assets/cc (11).jpg';
+import cc12 from '../assets/cc (12).jpg';
+import cc13 from '../assets/cc (13).jpg';
 
+import adip from '../assets/adip.jpg';
+import adip2 from '../assets/adip2.jpeg';
 import lesmills1 from '../assets/lesmills1.jpeg';
 
 const areas = [
-  { name: "ÁREA MUSCULAÇÃO", imgs: [cc8] },
-  { name: "ESPAÇO CARDIO", imgs: [cc7] }, 
-  { name: "AULAS COLETIVAS Lesmills", imgs: [lesmills1] },
-  { name: "ÁREA FUNCIONAL", imgs: [cc1] },
-  { name: "ESTACIONAMENTO", imgs: [cc6] },
-  { name: "AVALIAÇÃO FÍSICA", imgs: ["https://images.unsplash.com/photo-1523901839036-a3030662f220?q=80&w=600"] }
+  { name: "ÁREA MUSCULAÇÃO", imgs: [cc8, cc1, cc13] },
+  { name: "ESPAÇO CARDIO", imgs: [cc7, cc2, cc9] },
+  { name: "AULAS COLETIVAS Lesmills", imgs: [lesmills1, cc3] },
+  { name: "ÁREA FUNCIONAL", imgs: [cc1, cc4, cc5] },
+  { name: "ESTACIONAMENTO", imgs: [cc6, cc10, cc11, cc12] },
+  { name: "AVALIAÇÃO FÍSICA", imgs: [adip, adip2] }
 ];
 
 // 2. Componente interno para o carrossel de imagens do card
 const CardImages = ({ images, alt }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const tempoAleatorio = Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000;
   useEffect(() => {
     if (images.length <= 1) return;
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4500); // Troca a cada 3 segundos
+    }, tempoAleatorio); // Troca a cada 3 segundos
 
     return () => clearInterval(interval);
   }, [images]);
@@ -88,8 +94,8 @@ const LogoCloud = ({ onStart }) => {
       </div>
 
       <div className="relative flex overflow-visible cursor-grab active:cursor-grabbing">
-        <motion.div 
-          className="flex whitespace-nowrap gap-6 px-6" 
+        <motion.div
+          className="flex whitespace-nowrap gap-6 px-6"
           style={{ x }}
           drag="x"
           dragConstraints={{ left: -2500, right: 0 }}
@@ -97,8 +103,8 @@ const LogoCloud = ({ onStart }) => {
           onDragEnd={() => setIsDragging(false)}
         >
           {[...areas, ...areas].map((area, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] flex-shrink-0 overflow-hidden rounded-[2.5rem] group select-none"
             >
               {/* Carrossel Interno */}
@@ -106,7 +112,7 @@ const LogoCloud = ({ onStart }) => {
 
               {/* Overlay de Gradiente */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 pointer-events-none"></div>
-              
+
               {/* Texto com correção para não vazar */}
               <div className="absolute bottom-10 left-8 right-8 pointer-events-none">
                 <span className="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter whitespace-normal block leading-none group-hover:text-brand-gold transition-colors">

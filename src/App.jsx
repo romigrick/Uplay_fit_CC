@@ -73,8 +73,7 @@ function App() {
                 <WorkoutTypes  />
                 <Divider />
                 <CallToAction onStart={handleStart} />
-                <Pricing />
-              </motion.div>
+                </motion.div>
             )}
             
             {view === 'questionnaire' && (

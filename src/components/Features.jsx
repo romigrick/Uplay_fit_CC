@@ -178,7 +178,7 @@ const Features = () => {
         {/* O GRANDE DESTAQUE FINAL */}
         <div className="mt-24 text-center">
           <h1 className="text-5xl md:text-9xl font-black text-white leading-none tracking-[0.9] uppercase italic">
-            R$ 7,50 <span className="text-brand-gold">POR DIA.</span>
+            R$ 7,90 <span className="text-brand-gold">POR DIA.</span>
           </h1>
           <p className="mt-6 text-xl md:text-3xl text-gray-400 font-bold tracking-tight">
             Menos que um café. Mais que dobrar suas <span className="text-white underline decoration-brand-gold">chances de não desistir.</span>

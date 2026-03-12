@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check, MapPin } from 'lucide-react';
 import logoUplay from '@/assets/logo_com_cc.png';
+import ImageSequencePlayer from './ImageSequencePlayer';
 
 const Hero = ({ onStart }) => {
   return (
@@ -10,11 +11,7 @@ const Hero = ({ onStart }) => {
       </div>
 
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=2069"
-          alt="Ambiente Uplay Campo Comprido"
-          className="w-full h-full object-cover grayscale-[30%]"
-        />
+        <ImageSequencePlayer />
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent"></div>
       </div>
 

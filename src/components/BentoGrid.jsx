@@ -33,10 +33,10 @@ const BentoGrid = ({ onStart }) => {
                     <Card className="md:col-span-2 md:row-span-2 bg-gray-900 border border-white/5">
                         <div className="mb-8">
                             <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] mb-6 uppercase italic">
-                                CONHEÇA A <br/> UPLAY POR DENTRO
+                                São 3 andares <br/> pensados para você
                             </h3>
                             <p className="text-gray-400 font-bold italic text-lg max-w-xl">
-                                3 andares. 10+ setores específicos. Estrutura completa pensada pra você ter resultado. Vem conhecer pessoalmente.
+                               10+ setores específicos. Estrutura completa pensada pra você ter resultado. Vem conhecer pessoalmente.
                             </p>
                         </div>
                         
@@ -68,11 +68,11 @@ const BentoGrid = ({ onStart }) => {
                         </Button>
                     </Card>
 
-                    {/* Card de Investimento: R$ 7,50 POR DIA */}
+                    {/* Card de Investimento: R$ 7,90 POR DIA */}
                     <Card className="bg-white/5 border border-white/10 justify-center text-center">
                         <div className="space-y-6">
                             <h3 className="text-5xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter italic">
-                                R$ 7,50 <br/> <span className="text-brand-gold">POR DIA.</span>
+                                R$ 7,90 <br/> <span className="text-brand-gold">POR DIA.</span>
                             </h3>
                             <div className="space-y-2">
                                 <p className="text-white font-black italic text-2xl">Menos que um café.</p>
